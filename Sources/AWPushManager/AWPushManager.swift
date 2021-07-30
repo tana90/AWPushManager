@@ -3,7 +3,7 @@ import AWNetworkManager
 
 public struct AWPushManager {
     
-    static var apiURL: String = ""
+    public static var apiURL: String = ""
     
     static var token: String? {
         if let token = KeyChain.load(string: "AWPUSHREGISTERTOKEN"),
@@ -16,7 +16,7 @@ public struct AWPushManager {
     
     // MARK: Register user
 
-    static func registerUser(_ completion: @escaping (Bool) -> Void) {
+    public static func registerUser(_ completion: @escaping (Bool) -> Void) {
         
         guard let token = token else {
             completion(false)
@@ -57,7 +57,7 @@ public struct AWPushManager {
     
     // MARK: Register Device Id
     
-    static func register(device id: String,
+    public static func register(device id: String,
                          _ completion: @escaping () -> Void) {
         
         guard let token = token else { return }
