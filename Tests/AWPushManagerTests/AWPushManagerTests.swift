@@ -2,6 +2,8 @@
     @testable import AWPushManager
 
     final class AWPushManagerTests: XCTestCase {
-        func testExample() {
+        func testRegisterUser() throws {
+            
+            
         }
     }
