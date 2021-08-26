@@ -81,7 +81,7 @@ public struct AWPushManager {
             
             switch result {
             case .success(let data):
-                print("Register device response: \(String(data: data, encoding: .utf8))")
+                print("Register device response: \(String(data: data, encoding: .utf8) ?? "none")")
             case .failure(let error):
                 print("Error: \(error)")
             }
